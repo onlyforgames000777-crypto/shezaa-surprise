@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Memories Gallery 📸</title>
+<title>Our Beautiful Memories 📸</title>
 
 <style>
 
@@ -30,52 +30,98 @@ overflow-x:hidden;
 
 h1{
 color:#7a3e48;
+margin-top:10px;
 margin-bottom:15px;
+font-size:2rem;
 }
 
 .subtitle{
 color:#5a4a4a;
 line-height:1.8;
 margin-bottom:35px;
+font-size:1.05rem;
 }
 
 .gallery{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:25px;
+gap:35px;
 margin-top:20px;
 }
 
 .photo{
-width:280px;
-height:350px;
+
+width:300px;
 background:white;
-border-radius:25px;
-box-shadow:0 0 25px rgba(0,0,0,.12);
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:22px;
-color:#777;
-border:4px solid rgba(255,255,255,.8);
+padding:15px;
+border-radius:15px;
+
+box-shadow:
+0 12px 30px rgba(0,0,0,.15);
+
+transition:.4s;
+
+}
+
+.photo:nth-child(1){
+transform:rotate(-4deg);
+}
+
+.photo:nth-child(2){
+transform:rotate(3deg);
+}
+
+.photo:nth-child(3){
+transform:rotate(-2deg);
+}
+
+.photo:hover{
+transform:scale(1.05) rotate(0deg);
+}
+
+.photo img{
+
+width:100%;
+height:320px;
+object-fit:cover;
+
+border-radius:10px;
+
+}
+
+.caption{
+
+padding-top:15px;
+font-size:1rem;
+font-style:italic;
+color:#666;
+
 }
 
 .continue{
-margin-top:40px;
-padding:15px 35px;
+
+margin-top:50px;
+
+padding:16px 35px;
+
 font-size:18px;
 font-weight:bold;
+
 border:none;
 border-radius:20px;
+
 background:#ffcad4;
+
 cursor:pointer;
+
 }
 
 .sparkle{
 position:fixed;
 font-size:18px;
 animation:twinkle 3s infinite;
+pointer-events:none;
 }
 
 @keyframes twinkle{
@@ -91,25 +137,47 @@ animation:twinkle 3s infinite;
 <h1>📸 Some Of My Favourite Smiles In The World 📸</h1>
 
 <p class="subtitle">
+
 Every memory with you feels special, Syeda Shezaa 🥺🫶🏻🩵💫🪄🥹✨
+
+<br><br>
+
+And these are a few moments I wanted to keep close to my heart 💖
+
 </p>
 
 <div class="gallery">
 
 <div class="photo">
-<img src="IMG-20260529-WA0001.jpg"
-style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
+
+<img src="IMG-20260529-WA0001.jpg">
+
+<div class="caption">
+🌸 The Smile That Brightens My Day 🌸
+</div>
+
 </div>
 
 <div class="photo">
-<img src="IMG-20260529-WA0018.jpg"
-style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
+
+<img src="IMG-20260529-WA0018.jpg">
+
+<div class="caption">
+💖 A Memory Worth Keeping Forever 💖
+</div>
+
 </div>
 
 <div class="photo">
-<img src="IMG-20260529-WA0023.jpg"
-style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
+
+<img src="IMG-20260529-WA0023.jpg">
+
+<div class="caption">
+✨ One Of My Favourite People ✨
 </div>
+
+</div>
+
 </div>
 
 <button
@@ -122,7 +190,7 @@ onclick="window.location.href='letter.html'">
 
 <script>
 
-for(let i=0;i<40;i++){
+for(let i=0;i<50;i++){
 
 let sparkle=document.createElement("div");
 
