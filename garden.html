@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blooming Garden 🌸</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia, serif;
+}
+
+body{
+min-height:100vh;
+background:linear-gradient(
+135deg,
+#fff8f0,
+#fadadd,
+#ffe8b6,
+#f5c6c6
+);
+text-align:center;
+padding:30px;
+overflow-x:hidden;
+}
+
+h1{
+color:#7a3e48;
+margin-top:20px;
+margin-bottom:15px;
+}
+
+.subtitle{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+color:#5a4a4a;
+margin-bottom:35px;
+}
+
+.garden{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+max-width:600px;
+margin:auto;
+}
+
+.flower{
+font-size:70px;
+cursor:pointer;
+transition:.3s;
+}
+
+.flower:hover{
+transform:scale(1.15);
+}
+
+.message{
+display:none;
+margin-top:10px;
+background:white;
+padding:12px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,.1);
+}
+
+.continue{
+margin-top:40px;
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+background:#ffcad4;
+font-weight:bold;
+}
+
+.sparkle{
+position:fixed;
+font-size:18px;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+0%,100%{opacity:.3;}
+50%{opacity:1;}
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🌸 A Garden Of Little Things I Wanted To Tell You 🌸</h1>
+
+<p class="subtitle">
+Every flower below hides a small message for you, Syeda Shezaa 🥺🫶🏻🩵💫🪄🥹✨<br>
+Tap each flower and see what it reveals 🌸💖
+</p>
+
+<div class="garden">
+
+<div>
+<div class="flower" onclick="showMessage('m1')">🌸</div>
+<div class="message" id="m1">
+Your smile brightens even my ordinary days 🥺💖
+</div>
+</div>
+
+<div>
+<div class="flower" onclick="showMessage('m2')">🌷</div>
+<div class="message" id="m2">
+Thank you for every dua you've ever made for me 🤲🏻✨
+</div>
+</div>
+
+<div>
+<div class="flower" onclick="showMessage('m3')">🌹</div>
+<div class="message" id="m3">
+You make small moments feel special 🫶🏻🩵
+</div>
+</div>
+
+<div>
+<div class="flower" onclick="showMessage('m4')">🌺</div>
+<div class="message" id="m4">
+You mean more to me than words can explain 🥺💝
+</div>
+</div>
+
+<div>
+<div class="flower" onclick="showMessage('m5')">🌼</div>
+<div class="message" id="m5">
+I'm grateful for every conversation we've shared 🌸✨
+</div>
+</div>
+
+<div>
+<div class="flower" onclick="showMessage('m6')">🪷</div>
+<div class="message" id="m6">
+I Love You, Syeda Shezaa 🥺🫶🏻🩵💫🪄🥹💖
+</div>
+</div>
+
+</div>
+
+<button class="continue">
+✨ Continue ✨
+</button>
+
+<script>
+
+function showMessage(id){
+
+let msg=document.getElementById(id);
+
+if(msg.style.display==="block"){
+msg.style.display="none";
+}
+else{
+msg.style.display="block";
+}
+
+}
+
+for(let i=0;i<40;i++){
+
+let sparkle=document.createElement("div");
+
+sparkle.className="sparkle";
+sparkle.innerHTML="✨";
+
+sparkle.style.left=Math.random()*100+"vw";
+sparkle.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(sparkle);
+
+}
+
+</script>
+
+</body>
+</html>
