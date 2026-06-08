@@ -1,42 +1,239 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shezaa Surprise V3 Deluxe</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia, serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+background:linear-gradient(135deg,#063f4f,#0f7287,#124f67);
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+position:relative;
+}
+
+/* Stars */
+
+.star{
+position:absolute;
+color:white;
+animation:twinkle 3s infinite;
+opacity:0.7;
+}
+
+@keyframes twinkle{
+0%,100%{opacity:.3;}
+50%{opacity:1;}
+}
+
+/* Hearts */
+
+.heart{
+position:absolute;
+font-size:22px;
+animation:floatUp 12s linear infinite;
+opacity:.6;
+}
+
+@keyframes floatUp{
+from{
+transform:translateY(100vh);
+}
+to{
+transform:translateY(-100px);
+}
+}
+
+/* Main Card */
+
+.card{
+width:90%;
+max-width:650px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+border:3px solid rgba(255,215,0,.4);
+border-radius:30px;
+padding:35px;
+text-align:center;
+box-shadow:0 0 40px rgba(255,215,0,.25);
+z-index:10;
+}
+
+h1{
+font-size:2.2rem;
+margin-bottom:15px;
+}
+
+.subtitle{
+font-size:1rem;
+margin-bottom:25px;
+line-height:1.7;
+}
+
+.pinbox{
+width:220px;
+height:55px;
+border:none;
+border-radius:15px;
+font-size:24px;
+text-align:center;
+outline:none;
+margin-top:15px;
+}
+
+button{
+margin-top:18px;
+padding:14px 28px;
+border:none;
+border-radius:20px;
+font-size:18px;
+cursor:pointer;
+background:#ffd700;
+font-weight:bold;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.decor{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.bottom{
+margin-top:25px;
+font-size:25px;
+}
+
+.moon{
+position:absolute;
+top:40px;
+right:50px;
+font-size:80px;
+opacity:.9;
+}
+
+.teddy-left{
+position:absolute;
+bottom:25px;
+left:25px;
+font-size:60px;
+}
+
+.teddy-right{
+position:absolute;
+bottom:25px;
+right:25px;
+font-size:60px;
+}
+
+</style>
 </head>
-<body style="background:#0d5b6b;color:white;text-align:center;font-family:Georgia;padding:30px;">
 
-<h1>✨ Shezaa Surprise V3 Deluxe ✨</h1>
+<body>
 
-<h2>🔐 Enter the Special PIN 🔐</h2>
+<div class="moon">🌙</div>
 
-<input type="password" id="pin" maxlength="6" inputmode="numeric">
+<div class="teddy-left">🧸</div>
+<div class="teddy-right">🧸</div>
 
-<button onclick="checkPin()">Unlock</button>
+<div class="card">
 
-<div id="content" style="display:none;margin-top:30px;">
+<div class="decor">
+✨ 🌸 💖 🌸 ✨
+</div>
 
-<h1>🌸 My Dearest Syeda Shezaa 🌸</h1>
+<h1>🌙 A Little Surprise For Syeda Shezaa 🌙</h1>
 
-<p>
+<p class="subtitle">
 🥺🫶🏻🩵💫🪄🥹<br><br>
-
-This is only the beginning of your surprise...
+The key is hidden in a date that changed everything...<br>
+A date that means the world to us ✨
 </p>
+
+<input
+type="password"
+id="pin"
+class="pinbox"
+maxlength="6"
+inputmode="numeric"
+placeholder="261125">
+
+<br>
+
+<button onclick="checkPin()">
+✨ Open My Surprise ✨
+</button>
+
+<div class="bottom">
+🌹 💖 🌸 🩵 ✨ 🩵 🌸 💖 🌹
+</div>
 
 </div>
 
 <script>
+
+for(let i=0;i<60;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+star.innerHTML="⭐";
+
+star.style.left=Math.random()*100+"vw";
+star.style.top=Math.random()*100+"vh";
+star.style.fontSize=(10+Math.random()*15)+"px";
+
+document.body.appendChild(star);
+
+}
+
+for(let i=0;i<20;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=
+(8+Math.random()*8)+"s";
+
+document.body.appendChild(heart);
+
+}
+
 function checkPin(){
 
 let pin=document.getElementById("pin").value;
 
 if(pin==="261125"){
-document.getElementById("content").style.display="block";
+
+alert("🥺🫶🏻🩵💫🪄🥹 Welcome, Syeda Shezaa ✨");
+
 }
 else{
+
 alert("Wrong PIN 🥺");
+
 }
+
 }
+
 </script>
 
 </body>
