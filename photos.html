@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memories Gallery 📸</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia, serif;
+}
+
+body{
+background:linear-gradient(
+135deg,
+#fff8f0,
+#fadadd,
+#ffe8b6,
+#f5c6c6
+);
+min-height:100vh;
+padding:30px;
+text-align:center;
+overflow-x:hidden;
+}
+
+h1{
+color:#7a3e48;
+margin-bottom:15px;
+}
+
+.subtitle{
+color:#5a4a4a;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+margin-top:20px;
+}
+
+.photo{
+width:280px;
+height:350px;
+background:white;
+border-radius:25px;
+box-shadow:0 0 25px rgba(0,0,0,.12);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+color:#777;
+border:4px solid rgba(255,255,255,.8);
+}
+
+.continue{
+margin-top:40px;
+padding:15px 35px;
+font-size:18px;
+font-weight:bold;
+border:none;
+border-radius:20px;
+background:#ffcad4;
+cursor:pointer;
+}
+
+.sparkle{
+position:fixed;
+font-size:18px;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+0%,100%{opacity:.3;}
+50%{opacity:1;}
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>📸 Some Of My Favourite Smiles In The World 📸</h1>
+
+<p class="subtitle">
+Every memory with you feels special, Syeda Shezaa 🥺🫶🏻🩵💫🪄🥹✨
+</p>
+
+<div class="gallery">
+
+<div class="photo">
+📸 Photo 1
+</div>
+
+<div class="photo">
+📸 Photo 2
+</div>
+
+<div class="photo">
+📸 Photo 3
+</div>
+
+</div>
+
+<button
+class="continue"
+onclick="window.location.href='letter.html'">
+
+💌 Open The Letter 💌
+
+</button>
+
+<script>
+
+for(let i=0;i<40;i++){
+
+let sparkle=document.createElement("div");
+
+sparkle.className="sparkle";
+sparkle.innerHTML="✨";
+
+sparkle.style.left=Math.random()*100+"vw";
+sparkle.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(sparkle);
+
+}
+
+</script>
+
+</body>
+</html>
