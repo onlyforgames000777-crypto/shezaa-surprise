@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Dua For You 🤲🏻</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia, serif;
+}
+
+body{
+min-height:100vh;
+background:linear-gradient(
+135deg,
+#fff8f0,
+#fadadd,
+#ffe8b6,
+#f5c6c6
+);
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+overflow:hidden;
+position:relative;
+}
+
+.card{
+max-width:900px;
+background:rgba(255,255,255,.75);
+backdrop-filter:blur(12px);
+padding:45px;
+border-radius:35px;
+text-align:center;
+box-shadow:0 0 35px rgba(255,215,0,.25);
+border:3px solid rgba(255,215,0,.3);
+z-index:10;
+}
+
+h1{
+color:#7a3e48;
+margin-bottom:25px;
+font-size:2.2rem;
+}
+
+.arabic{
+font-size:2rem;
+line-height:2;
+margin-bottom:30px;
+color:#444;
+direction:rtl;
+}
+
+.translation{
+font-size:1.1rem;
+line-height:1.9;
+color:#555;
+margin-bottom:30px;
+}
+
+.signature{
+font-size:1.1rem;
+margin-top:20px;
+color:#7a3e48;
+font-style:italic;
+}
+
+.finalbtn{
+margin-top:35px;
+padding:16px 35px;
+border:none;
+border-radius:20px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+background:#ffcad4;
+}
+
+.sparkle{
+position:absolute;
+font-size:18px;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+0%,100%{opacity:.3;}
+50%{opacity:1;}
+}
+
+.moon{
+position:absolute;
+top:30px;
+right:40px;
+font-size:70px;
+}
+
+.lantern1{
+position:absolute;
+top:25px;
+left:40px;
+font-size:50px;
+}
+
+.lantern2{
+position:absolute;
+top:25px;
+left:110px;
+font-size:50px;
+}
+
+.petal{
+position:absolute;
+font-size:22px;
+animation:fall 12s linear infinite;
+}
+
+@keyframes fall{
+from{
+transform:translateY(-100px);
+}
+to{
+transform:translateY(110vh);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="moon">🌙</div>
+<div class="lantern1">🏮</div>
+<div class="lantern2">🏮</div>
+
+<div class="card">
+
+<h1>🤲🏻 A Dua For Syeda Shezaa 🤲🏻</h1>
+
+<div class="arabic">
+اللهم بارك لها في عمرها وعلمها ورزقها<br>
+واحفظها وأسعد قلبها ووفقها لكل خير
+</div>
+
+<div class="translation">
+
+O Allah, bless her life, her knowledge, and her sustenance...
+
+Protect her, keep her safe, fill her heart with happiness, and grant her success in every good thing 🤲🏻✨
+
+Grant her peace when she is worried...
+
+Strength when she is tired...
+
+And endless blessings in this life and the next 🌸🩵✨
+
+Ameen 🤲🏻
+
+</div>
+
+<div class="signature">
+From Ahmed 🥺🫶🏻🩵💫🪄🥹
+</div>
+
+<button
+class="finalbtn"
+onclick="window.location.href='final.html'">
+
+🎁 One Final Thing... 🎁
+
+</button>
+
+</div>
+
+<script>
+
+for(let i=0;i<50;i++){
+
+let sparkle=document.createElement("div");
+
+sparkle.className="sparkle";
+sparkle.innerHTML="✨";
+
+sparkle.style.left=Math.random()*100+"vw";
+sparkle.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(sparkle);
+
+}
+
+for(let i=0;i<20;i++){
+
+let petal=document.createElement("div");
+
+petal.className="petal";
+petal.innerHTML="🌸";
+
+petal.style.left=Math.random()*100+"vw";
+petal.style.animationDuration=
+(8+Math.random()*8)+"s";
+
+document.body.appendChild(petal);
+
+}
+
+</script>
+
+</body>
+</html>
