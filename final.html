@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Final Surprise 💖</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia, serif;
+}
+
+body{
+min-height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(
+180deg,
+#0b1d3a,
+#1b305c,
+#2b4d87
+);
+position:relative;
+}
+
+.card{
+max-width:900px;
+margin:20px;
+padding:50px;
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(12px);
+border-radius:35px;
+text-align:center;
+border:2px solid rgba(255,255,255,.2);
+box-shadow:0 0 40px rgba(255,255,255,.15);
+z-index:5;
+}
+
+h1{
+font-size:2.5rem;
+color:white;
+margin-bottom:25px;
+}
+
+.text{
+font-size:1.2rem;
+line-height:2;
+color:white;
+}
+
+.finalheart{
+font-size:70px;
+margin-top:30px;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.15);}
+100%{transform:scale(1);}
+}
+
+.star{
+position:absolute;
+color:white;
+font-size:18px;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+0%,100%{opacity:.2;}
+50%{opacity:1;}
+}
+
+.shooting{
+position:absolute;
+font-size:25px;
+animation:shoot 8s linear infinite;
+}
+
+@keyframes shoot{
+from{
+transform:translate(-100px,-100px);
+}
+to{
+transform:translate(120vw,120vh);
+}
+}
+
+.moon{
+position:absolute;
+top:40px;
+right:50px;
+font-size:90px;
+}
+
+.footer{
+margin-top:25px;
+color:#ffdede;
+font-style:italic;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="moon">🌙</div>
+
+<div class="card">
+
+<h1>💖 One Last Thing... 💖</h1>
+
+<div class="text">
+
+Thank you for entering my life, Syeda Shezaa 🥺🫶🏻🩵💫🪄🥹
+
+<br><br>
+
+Some people walk into our lives and quietly become one of the most beautiful parts of it...
+
+<br><br>
+
+You are one of those people 🌸✨
+
+<br><br>
+
+Thank you for the smiles...
+Thank you for the conversations...
+Thank you for the memories...
+Thank you for simply being you 🥺💖
+
+<br><br>
+
+No matter what happens in life, I will always pray for your happiness, success, peace and barakah 🤲🏻✨
+
+<br><br>
+
+May Allah fill your days with joy, protect your heart, and grant you everything that is best for you 🌹🩵✨
+
+</div>
+
+<div class="finalheart">
+💖
+</div>
+
+<div class="footer">
+✨ The End... Or Perhaps Just The Beginning ✨
+</div>
+
+</div>
+
+<script>
+
+for(let i=0;i<120;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+star.innerHTML="⭐";
+
+star.style.left=Math.random()*100+"vw";
+star.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(star);
+
+}
+
+for(let i=0;i<6;i++){
+
+let shooting=document.createElement("div");
+
+shooting.className="shooting";
+shooting.innerHTML="🌠";
+
+shooting.style.left=Math.random()*100+"vw";
+shooting.style.top=Math.random()*30+"vh";
+shooting.style.animationDuration=
+(6+Math.random()*5)+"s";
+
+document.body.appendChild(shooting);
+
+}
+
+</script>
+
+</body>
+</html>
